@@ -1,4 +1,3 @@
-//radius of cirlce with constructyor and destructor
 #include<stdio.h>
 #include<iostream>
 using namespace std;
