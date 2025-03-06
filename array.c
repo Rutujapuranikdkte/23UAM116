@@ -1,34 +1,54 @@
 #include<stdio.h>
 int main()
 {
-		int size,target,i,j,index=-1,index2=-1;
-		printf("enter size");
-		scanf("%d",&size);
-		int a[size];
-		printf("\nenter elements");
-		for(i=0;i<size;i++)
-		{
-				scanf("%d",&a[i]);
-		}
-		printf("enter target");
-		scanf("%d",&target);
-		for(i=0;i<size;i++)
-		{
-			if(a[i]==target)
-			{
-				if(index==-1){
-					index=i;
-				}
-			index2=i;
-		}
-	}
-		if(index!=-1)
-		{
-				printf("\nthe first index is%d",index);
-				printf("\nthe second index is%d",index2);
-		}
-		else
-		{
-				printf("target not found");
-		}
-}
+    int a[5],i,j,temp;
+    int *p;
+    p=a;
+    printf("Enter an array elements");
+    for(i=0;i<5;i++)
+    {
+                    sacnf("%d",(p+i));
+    }
+    printf("Display an array elements");
+    for(i=0;i<5;i++)
+    {
+                    printf("a[%d]=%d\n",i,*(p+i));
+    }
+    for(i=0;i<5;i++)
+    {
+         for(j=i+1;j<0;j++)
+         {
+                           if(*(p+i)>*(p+j))
+                           {
+                                            temp=*(p+i);
+                                            *(p+i)=*(p+j);
+                                            *(p+j)=temp;
+                           }
+         }
+    }
+    printf("ascending order of an array elements:\n");
+                      for(i=0;i<5;i++)
+    {
+                      printf("a[%d]=%d\n",i,*(p+i));
+    }                           
+                    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
